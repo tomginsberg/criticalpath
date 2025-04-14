@@ -1,0 +1,246 @@
+[
+  {
+    "id": "canadian-tire",
+    "title": "Canadian Tire",
+    "caption": "New Stores and Store Expansions Across Canada",
+    "storyFile": "/data/projects-md/ct.md",
+    "image": "/projects/canadiantire.jpg",
+    "gallery": [
+      "/projects/canadian-tire/img0.jpg",
+      "/projects/canadian-tire/img1.jpg",
+      "/projects/canadian-tire/img2.jpg",
+      "/projects/canadian-tire/img3.jpg",
+      "/projects/canadian-tire/img4.jpg",
+      "/projects/canadian-tire/img5.jpg",
+      "/projects/canadian-tire/img6.jpg"
+    ]
+  },
+  {
+    "id": "woodgreen",
+    "title": "WoodGreen",
+    "caption": "High-Rise Zero Carbon Retrofit",
+    "storyFile": "/data/projects-md/woodgreen.md",
+    "image": "/projects/cmhc.jpg",
+    "gallery": []
+  },
+  {
+    "id": "bcg",
+    "title": "Boston Consulting Group",
+    "caption": "Award Winning Office Fit-Out",
+    "storyFile": "/data/projects-md/bcg.md",
+    "image": "/projects/bcg.jpg",
+    "gallery": [
+      "/projects/bcg/bcg1.jpg",
+      "/projects/bcg/img0.jpg",
+      "/projects/bcg/img1.jpg",
+      "/projects/bcg/img10.jpg",
+      "/projects/bcg/img11.jpg",
+      "/projects/bcg/img12.jpg",
+      "/projects/bcg/img13.jpg",
+      "/projects/bcg/img2.jpg",
+      "/projects/bcg/img3.jpg",
+      "/projects/bcg/img4.jpg",
+      "/projects/bcg/img5.jpg",
+      "/projects/bcg/img6.jpg",
+      "/projects/bcg/img7.jpg",
+      "/projects/bcg/img8.jpg",
+      "/projects/bcg/img9.jpg"
+    ]
+  },
+  {
+    "id": "nike",
+    "title": "Nike",
+    "caption": "New Corporate Office",
+    "storyFile": "/data/projects-md/nike.md",
+    "image": "/projects/nike.jpg",
+    "gallery": [
+      "/projects/nike/img0.jpg",
+      "/projects/nike/img1.jpg",
+      "/projects/nike/img10.jpg",
+      "/projects/nike/img2.jpg",
+      "/projects/nike/img3.jpg",
+      "/projects/nike/img4.jpg",
+      "/projects/nike/img5.jpg",
+      "/projects/nike/img6.jpg",
+      "/projects/nike/img7.jpg",
+      "/projects/nike/img8.jpg",
+      "/projects/nike/img9.jpg"
+    ]
+  },
+  {
+    "id": "government-of-canada",
+    "title": "Government of Canada",
+    "caption": "New Research Greenhouse",
+    "storyFile": "/data/projects-md/goc.md",
+    "image": "/projects/greenhouse.jpg",
+    "gallery": [
+      "/projects/government-of-canada/img0.jpg",
+      "/projects/government-of-canada/img1.jpg",
+      "/projects/government-of-canada/img10.jpg",
+      "/projects/government-of-canada/img11.jpg",
+      "/projects/government-of-canada/img2.jpg",
+      "/projects/government-of-canada/img3.jpg",
+      "/projects/government-of-canada/img4.jpg",
+      "/projects/government-of-canada/img5.jpg",
+      "/projects/government-of-canada/img6.jpg",
+      "/projects/government-of-canada/img7.jpg",
+      "/projects/government-of-canada/img8.jpg",
+      "/projects/government-of-canada/img9.jpg"
+    ]
+  },
+  {
+    "id": "cbc",
+    "title": "Canadian Broadcasting Corporation",
+    "caption": "New Master Control Facility",
+    "storyFile": "/data/projects-md/cbc.md",
+    "image": "/projects/cbc.jpg",
+    "gallery": []
+  },
+  {
+    "id": "mckesson",
+    "title": "McKesson Canada",
+    "caption": "New Corporate Head Office",
+    "storyFile": "/data/projects-md/mckesson.md",
+    "image": "/projects/mckesson.jpg",
+    "gallery": [
+      "/projects/mckesson/img0.jpg",
+      "/projects/mckesson/img1.jpg",
+      "/projects/mckesson/img2.jpg",
+      "/projects/mckesson/img3.jpg",
+      "/projects/mckesson/img4.jpg",
+      "/projects/mckesson/img5.jpg",
+      "/projects/mckesson/img6.jpg",
+      "/projects/mckesson/img7.jpg",
+      "/projects/mckesson/img8.jpg"
+    ]
+  },
+  {
+    "id": "connor-clark-and-lunn",
+    "title": "Connor, Clark & Lunn",
+    "caption": "New Corporate Offices",
+    "storyFile": "/data/projects-md/connor-clark-and-lunn.md",
+    "image": "/projects/connor-clark-and-lunn.jpg",
+    "gallery": [
+      "/projects/connor-clark-and-lunn/img0.jpg",
+      "/projects/connor-clark-and-lunn/img1.jpg",
+      "/projects/connor-clark-and-lunn/img2.jpg",
+      "/projects/connor-clark-and-lunn/img3.jpg",
+      "/projects/connor-clark-and-lunn/img4.jpg",
+      "/projects/connor-clark-and-lunn/img5.jpg",
+      "/projects/connor-clark-and-lunn/img6.jpg",
+      "/projects/connor-clark-and-lunn/img7.jpg"
+    ]
+  },
+  {
+    "id": "strellson",
+    "title": "Strellson",
+    "caption": "New Retail Stores in Rideau Centre and Yorkdale Mall",
+    "storyFile": "/data/projects-md/strellson.md",
+    "image": "/projects/strellson.jpg",
+    "gallery": [
+      "/projects/strellson/img0.jpg",
+      "/projects/strellson/img1.jpg",
+      "/projects/strellson/img2.jpg",
+      "/projects/strellson/img3.jpg",
+      "/projects/strellson/img4.jpg"
+    ]
+  },
+  {
+    "id": "uoft",
+    "title": "Victoria University in U of T",
+    "caption": "Exterior Restoration of the Historic Lillian Massey Building",
+    "storyFile": "/data/projects-md/uoft.md",
+    "image": "/projects/uoft.jpg",
+    "gallery": [
+      "/projects/uoft/img0.jpg",
+      "/projects/uoft/img1.jpg",
+      "/projects/uoft/img2.jpg",
+      "/projects/uoft/img3.jpg"
+    ]
+  },
+  {
+    "id": "candu",
+    "title": "Candu Energy",
+    "caption": "New Nuclear Labs",
+    "storyFile": "/data/projects-md/candu.md",
+    "image": "/projects/candu.jpg",
+    "gallery": [
+      "/projects/candu/img0.jpg",
+      "/projects/candu/img1.jpg",
+      "/projects/candu/img2.jpg",
+      "/projects/candu/img3.jpg",
+      "/projects/candu/img4.jpg",
+      "/projects/candu/img5.jpg",
+      "/projects/candu/img6.jpg"
+    ]
+  },
+  {
+    "id": "anderson-water-systems",
+    "title": "Anderson Water Systems",
+    "caption": "New Corporate Offices and Plant Consolidation",
+    "storyFile": "/data/projects-md/anderson-water-systems.md",
+    "image": "/projects/anderson-water-systems.jpg",
+    "gallery": [
+      "/projects/anderson-water-systems/img0.jpg",
+      "/projects/anderson-water-systems/img1.jpg",
+      "/projects/anderson-water-systems/img2.jpg",
+      "/projects/anderson-water-systems/img3.jpg",
+      "/projects/anderson-water-systems/img4.jpg",
+      "/projects/anderson-water-systems/img5.jpg",
+      "/projects/anderson-water-systems/img6.jpg",
+      "/projects/anderson-water-systems/img7.jpg",
+      "/projects/anderson-water-systems/img8.jpg"
+    ]
+  },
+  {
+    "id": "trinity-college",
+    "title": "Trinity College in U of T",
+    "caption": "New Archives, Geothermal Heating, and Elevator",
+    "storyFile": "/data/projects-md/trinity-college.md",
+    "image": "/projects/trinity-college.jpg",
+    "gallery": [
+      "/projects/trinity-college/img0.jpg",
+      "/projects/trinity-college/img1.jpg",
+      "/projects/trinity-college/img2.jpg",
+      "/projects/trinity-college/img3.jpg",
+      "/projects/trinity-college/img4.jpg"
+    ]
+  },
+  {
+    "id": "byron-capital-markets",
+    "title": "Byron Capital Markets",
+    "caption": "New Office Space",
+    "storyFile": "/data/projects-md/byron-capital-markets.md",
+    "image": "/projects/byron-capital-markets.jpg",
+    "gallery": [
+      "/projects/byron-capital-markets/img0.jpg",
+      "/projects/byron-capital-markets/img1.jpg",
+      "/projects/byron-capital-markets/img2.jpg",
+      "/projects/byron-capital-markets/img3.jpg",
+      "/projects/byron-capital-markets/img4.jpg"
+    ]
+  },
+  {
+    "id": "ontario-trillium-foundation",
+    "title": "Ontario Trillium Foundation",
+    "caption": "New Office Space",
+    "storyFile": "/data/projects-md/ontario-trillium-foundation.md",
+    "image": "/projects/ontario-trillium-foundation.jpg",
+    "gallery": [
+      "/projects/ontario-trillium-foundation/img0.jpg",
+      "/projects/ontario-trillium-foundation/img1.jpg",
+      "/projects/ontario-trillium-foundation/img2.jpg",
+      "/projects/ontario-trillium-foundation/img3.jpg",
+      "/projects/ontario-trillium-foundation/img4.jpg",
+      "/projects/ontario-trillium-foundation/img5.jpg",
+      "/projects/ontario-trillium-foundation/img6.jpg"
+    ]
+  },
+{
+  "id": "alterna-savings",
+  "title": "Alterna Savings",
+  "caption": "New Office Space",
+  "storyFile": "/data/projects-md/alterna-savings.md",
+  "image": "/projects/alterna-savings.jpg"
+}
+]

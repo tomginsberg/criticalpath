@@ -1,0 +1,3 @@
+Trinity College in the University of Toronto has a rich 150 year history and significant archival material to keep safe for future generations.  The material was kept in less than ideal conditions and so a new archive was needed.  This project created a fully temperature and humidity controlled environment in unused raw basement space.   Bright workspace and museum quality display cabinets were also created to allow safe display of more material.  Trinity’s first elevator was installed in this historic building to allow easier access of material and the disabled to access the space.
+
+Critical Path Projects worked with the client, Architect, engineers and contractors to manage all the details and successfully deliver this beautiful space on schedule and on budget.

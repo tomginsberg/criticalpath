@@ -1,0 +1,1 @@
+Alterna’s main Toronto office moved to 16,000 sq ft in  midtown Toronto.  Critical Path Projects effectively managed the design, construction and 2 phase move-in to the space ensuring  business needs were met and the new design took full advantage of fabulous views.  The project ran under budget and completed on schedule.

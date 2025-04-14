@@ -1,0 +1,1 @@
+When Nike moved their Canadian headquarters from the suburbs to downtown Toronto they needed good Project Management. Critical Path Projects helped the Corporate Real Estate group headquartered in Beaverton, Oregon design and construct their new Canadian office. The result is a modern workplace that is very much in keeping with the brand.

@@ -1,0 +1,1 @@
+This 180,000 square foot building was completely renovated to accommodate McKesson Canada’s new head office.  It incorporates various types of office space along with lab and packaging space in the basement.   Critical Path Projects helped ensure they moved in on time and on budget.

@@ -1,0 +1,1 @@
+When the Government of Canada needed Project Management to aid in the design and construction of a new research greenhouse in London, Ontario they engaged Critical Path Projects Inc. The firm managed the design, engineering and construction of this state of the art research facility.

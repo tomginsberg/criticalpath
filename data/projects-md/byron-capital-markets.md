@@ -1,0 +1,1 @@
+Consultation on design and engineering of the complete build out of 20,000 square feet of new office space in downtown Toronto. Byron Capital moved 100 employees into the space after 10 weeks of construction. The project was completed on time and on budget.

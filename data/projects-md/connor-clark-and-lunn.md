@@ -1,0 +1,1 @@
+This financial services firm had old offices on three different floors in a tired building. Their new space is clean, modern and now all teams work together on one, contiguous floor. This modern, bright  layout on one floor creates greater efficiencies and collaboration between divisions. Specialty millwork, glazing and bright colours also add to the dynamic new space.
