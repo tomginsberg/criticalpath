@@ -20,7 +20,7 @@ export default function Clients() {
     <section className="py-12 bg-white border-b border-gray-100">
       <div className="container">
         <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">TRUSTED CUSTOMERS</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Trusted Clients</h2>
         </div>
 
         <div className="relative">

@@ -9,7 +9,7 @@ export default function Advantage() {
       <div className="container">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">THE CRITICAL PATH ADVANTAGE</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">The Critical Path Advantage</h2>
             <p className="text-lg text-gray-700">
               Critical Path Projects is uniquely positioned to help businesses with their ground-up, retrofit or
               renovations construction needs. We understand and can manage the entire process, from signing a lease to

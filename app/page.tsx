@@ -15,14 +15,12 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <Clients /> {/* Moved to appear right after the hero section */}
       <About />
       <Advantage />
       <SaveMoney />
       <Services />
       <Projects />
       <Team />
-      <Contact />
       <Footer />
     </main>
   )

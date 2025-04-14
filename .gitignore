@@ -25,3 +25,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+www.criticalpathprojects.com.har
+.gitignore
+.gitignore
+public/projects/.DS_Store
+public/.DS_Store
+.DS_Store
