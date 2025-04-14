@@ -99,17 +99,15 @@ export default function ServicesPage() {
             interests first.
           </p>
 
-          <div className="grid gap-8 grid-cols-1">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                className="bg-gray-200 p-6 border border-gray-100"
               >
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 mt-1">
-                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center">
-                      <Check className="h-4 w-4 text-teal-600" />
-                    </div>
+
                   </div>
                   <div>
                     <h2 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h2>
@@ -120,7 +118,7 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          <div className="mt-12 bg-gray-50 p-6 rounded-lg border border-gray-200">
+          <div className="mt-12  p-6  ">
             <p className="text-gray-700 italic">
               *Critical Path Projects can also be engaged for other construction related services not listed above.
             </p>
@@ -128,7 +126,7 @@ export default function ServicesPage() {
 
           <div className="mt-12 flex justify-center">
             <Link href="/#contact">
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white">Contact Us About Our Services</Button>
+              <Button className=" " variant="outline">Contact Us About Our Services</Button>
             </Link>
           </div>
         </div>

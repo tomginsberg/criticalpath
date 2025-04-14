@@ -25,7 +25,7 @@ export default function Advantage() {
             <div className="mt-4">
 
             <Link href="/success-methodology">
-            <Button className="group bg-teal-600 hover:bg-teal-700 text-white flex items-center gap-2">
+            <Button variant="outline" className="group  flex items-center gap-2">
               How We Make Your Project A Success
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>

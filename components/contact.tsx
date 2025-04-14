@@ -12,44 +12,7 @@ export default function Contact() {
           <p className="text-lg text-gray-700">Ready to discuss your project? Get in touch with our team today.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                <Phone className="h-5 w-5 text-teal-600" />
-              </div>
-              <div>
-                <h3 className="text-lg font-medium mb-1">Call Us</h3>
-                <p className="text-gray-700">(555) 123-4567</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                <Mail className="h-5 w-5 text-teal-600" />
-              </div>
-              <div>
-                <h3 className="text-lg font-medium mb-1">Email Us</h3>
-                <p className="text-gray-700">info@criticalpathprojects.com</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                <MapPin className="h-5 w-5 text-teal-600" />
-              </div>
-              <div>
-                <h3 className="text-lg font-medium mb-1">Visit Us</h3>
-                <p className="text-gray-700">
-                  123 Construction Avenue
-                  <br />
-                  Suite 400
-                  <br />
-                  Vancouver, BC V6B 1A1
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="grid md:grid-cols-1 gap-12 max-w-5xl mx-auto">
 
           <form className="space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -81,7 +44,7 @@ export default function Contact() {
               <Textarea id="message" placeholder="Your message" rows={5} />
             </div>
 
-            <Button type="submit" className="w-full bg-teal-600 hover:bg-teal-700">
+            <Button variant="outline" type="submit" className="w-full rounded-none">
               Send Message
             </Button>
           </form>

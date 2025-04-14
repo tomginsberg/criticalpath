@@ -85,7 +85,7 @@ export default function Services() {
 
         <div className="mt-12 flex justify-center">
           <Link href="/services">
-            <Button className="group bg-teal-600 hover:bg-teal-700 text-white">See More Services</Button>
+            <Button variant="outline" className="group  ">See More Services</Button>
           </Link>
         </div>
       </div>

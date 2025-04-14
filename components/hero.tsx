@@ -38,7 +38,7 @@ export default function Hero() {
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
             <span className="block">You have a business to run.</span>
-            <span className="block text-teal-400">Let us manage your construction and retrofit projects.</span>
+            <span className="block text-gray-300">Let us manage your construction and retrofit projects.</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">
             With nearly 30 years of experience managing construction projects across Canada, we save you time, money,
@@ -48,7 +48,8 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="bg-teal-600 hover:bg-teal-700 text-white"
+              className="bg-black text-white rounded-none"
+              variant="ghost"
               onClick={() => {
                 const element = document.getElementById("contact")
                 if (element) {
@@ -61,7 +62,7 @@ export default function Hero() {
             <Button
               variant="outline"
               size="lg"
-              className="border-white text-black hover:bg-white/10 hover:text-white"
+              className="border-white rounded-none text-black hover:bg-white/10 hover:text-white"
               onClick={() => {
                 const element = document.getElementById("services")
                 if (element) {

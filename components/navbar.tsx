@@ -67,8 +67,8 @@ export default function Navbar() {
           isScrolled
             ? isMobile
               ? "bottom-4 left-4 right-4 bg-black/60 backdrop-blur-lg rounded-full shadow-lg py-2 mx-6 px-0" // Mobile scrolled - at bottom
-              : "top-4 left-4 right-4 mx-auto bg-black/60 backdrop-blur-lg shadow-lg rounded-full pt-2 pb-1 px-0" // Desktop scrolled - at top
-            : "top-4 left-4 right-4 mx-auto pt-2 pb-1 px-0 rounded-full", // Not scrolled - at top for both
+              : "top-0 left-0 right-0 mx-auto bg-black/80 backdrop-blur-lg shadow-lg pt-2 pb-1 px-0" // Desktop scrolled - at top
+            : "top-0 left-0 right-0 mx-auto pt-2 pb-1 px-0 bg-black/80 backdrop-blur-lg", // Not scrolled - at top for both
         )}
       >
         <div className={cn("flex items-center justify-between", isScrolled ? "container mx-auto" : "container")}>

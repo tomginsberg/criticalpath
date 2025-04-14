@@ -14,9 +14,7 @@ export default function SaveMoney() {
           <p className="text-lg text-gray-700 mb-8">We do this by:</p>
           <div className="space-y-6">
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center">
-                <Check className="h-5 w-5 text-teal-600" />
-              </div>
+
               <div>
                 <p className="text-lg text-gray-700">
                   <span className="font-medium">
@@ -29,9 +27,7 @@ export default function SaveMoney() {
               </div>
             </div>
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center">
-                <Check className="h-5 w-5 text-teal-600" />
-              </div>
+
               <div>
                 <p className="text-lg text-gray-700">
                   <span className="font-medium">
@@ -44,9 +40,7 @@ export default function SaveMoney() {
               </div>
             </div>
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center">
-                <Check className="h-5 w-5 text-teal-600" />
-              </div>
+  
               <div>
                 <p className="text-lg text-gray-700">
                   <span className="font-medium">
