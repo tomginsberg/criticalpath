@@ -15,7 +15,7 @@ export default function Clients() {
     {name: "Oxford", logo: "/logos/Oxford_Properties_logo_svg.png" },
     {name: "UofT", logo: "/logos/uoft.png" },
   ]
-  // unrealated  change
+
   return (
     <section className="py-12 bg-white border-b border-gray-100">
       <div className="container">
