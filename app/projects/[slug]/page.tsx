@@ -14,11 +14,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import type { PageProps } from "next" 
 
-interface ProjectPageProps {
-  params: {
-    slug: string
-  }
+interface ProjectParams {
+  slug: string
 }
 
 export async function generateStaticParams() {
@@ -27,7 +26,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
+export default async function ProjectPage({ params }: PageProps<ProjectParams>) {
   const project = projectsData.find((p) => p.id === params.slug)
 
   if (!project) {
