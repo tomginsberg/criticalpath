@@ -8,6 +8,9 @@ export default function Hero() {
   // Client logos for the slider
   const clients = [
     {name: "Canadian Tire", logo: "/logos/canadian-tire.png" },
+    {name: "Woodgreen", logo: "/logos/woodgreen.png" },
+    {name: "CMHM", logo: "/logos/CMHC.png" },
+    {name: "Canada", logo: "/logos/canada.png" },
     {name: "TD Bank", logo: "/logos/1144px-Toronto-Dominion_Bank_logo.svg.png" },
     {name: "Bell", logo: "/logos/Bell_logo.svg" },
     {name: "CBC", logo: "/logos/250px-CBC_Logo_1992-Present.svg.png" },
@@ -109,7 +112,7 @@ export default function Hero() {
           <Slider
             width="220px"
             duration={40}
-            pauseOnHover={false}
+            pauseOnHover={true}
             blurBorders={false}
           >
             {clients.map((client) => (
