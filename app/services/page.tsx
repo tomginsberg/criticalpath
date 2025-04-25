@@ -103,7 +103,7 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-200 p-6 border border-gray-100"
+                className=" p-6 border bg-gray-100 rounded-md"
               >
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 mt-1">

@@ -14,7 +14,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import type { PageProps } from "next" 
+interface PageProps<T> {
+  params: T;
+  searchParams?: Record<string, string | string[] | undefined>;
+}
 
 interface ProjectParams {
   slug: string
@@ -59,7 +62,7 @@ export default async function ProjectPage({ params }: PageProps<ProjectParams>) 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-2">{project.title}</h1>
-            <p className="text-xl text-teal-600 font-medium mb-6">{project.caption}</p>
+            <p className="text-xl text-blue-400 font-medium mb-6">{project.caption}</p>
 
             {/* <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center gap-2 text-gray-600">

@@ -64,6 +64,10 @@ const config: Config = {
           900: "#134e4a",
           950: "#042f2e",
         },
+        blues:{
+          penn: "#021F59",
+          egyptian: "#0337A0"
+        }
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -1,4 +1,4 @@
-import { Building2, ClipboardList, HardHat } from "lucide-react"
+import { ArrowRight, Building2, ClipboardList, HardHat } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export default function Services() {
   return (
-    <section id="services" className="py-16 md:py-24 bg-gray-50">
+    <section id="services" className="py-16 md:py-24 bg-slate-200">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
@@ -85,7 +85,10 @@ export default function Services() {
 
         <div className="mt-12 flex justify-center">
           <Link href="/services">
-            <Button variant="outline" className="group  ">See More Services</Button>
+          <Button variant="outline" className="group flex items-center gap-2">
+            See More Services
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
           </Link>
         </div>
       </div>
