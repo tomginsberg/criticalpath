@@ -25,11 +25,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Critical Path Projects - Construction Project Management",
     description: "Expert project management for commercial construction and renovation projects across Canada.",
-    url: "https://criticalpath.vercel.app",
+    url: "https://criticalpathprojects.com",
     siteName: "Critical Path Projects",
     images: [
       {
-        url: "https://criticalpath.vercel.app/og.png",
+        url: "https://criticalpath.vercel.app/images/og.png",
         width: 1200,
         height: 630,
         alt: "Critical Path Projects",
