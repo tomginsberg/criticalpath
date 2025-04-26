@@ -39,7 +39,9 @@ export default function SaveMoney() {
 
       <div className="container relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">How We Save You Money</h2>
+        <p className="px-8 text-4xl md:text-6xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-300 relative z-10 ">
+       How We Save You Money
+      </p>
           <div className="h-1 w-24 bg-blue-300 mx-auto mb-8"></div>
           <p className="text-left text-lg text-gray-100 mb-6">
             A big part of what we do is save you money. We know where to look for opportunities to efficiently save on

@@ -115,37 +115,37 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center gap-6">
             <button
               onClick={() => navigateToSection("about")}
-              className="text-sm font-medium text-white hover:text-teal-400 transition-colors"
+              className="text-sm font-medium text-white hover:text-blue-400 transition-colors"
             >
               About
             </button>
             <button
               onClick={() => navigateToSection("advantage")}
-              className="text-sm font-medium text-white hover:text-teal-400 transition-colors"
+              className="text-sm font-medium text-white hover:text-blue-400 transition-colors"
             >
               Advantage
             </button>
             <button
               onClick={() => navigateToSection("save-money")}
-              className="text-sm font-medium text-white hover:text-teal-400 transition-colors"
+              className="text-sm font-medium text-white hover:text-blue-400 transition-colors"
             >
               Savings
             </button>
             <button
               onClick={() => navigateToSection("services")}
-              className="text-sm font-medium text-white hover:text-teal-400 transition-colors"
+              className="text-sm font-medium text-white hover:text-blue-400 transition-colors"
             >
               Services
             </button>
             <button
               onClick={() => navigateToSection("projects")}
-              className="text-sm font-medium text-white hover:text-teal-400 transition-colors"
+              className="text-sm font-medium text-white hover:text-blue-400 transition-colors"
             >
               Projects
             </button>
             <button
               onClick={() => navigateToSection("team")}
-              className="text-sm font-medium text-white hover:text-teal-400 transition-colors"
+              className="text-sm font-medium text-white hover:text-blue-400 transition-colors"
             >
               Team
             </button>
@@ -160,22 +160,22 @@ export default function Navbar() {
           {/* Mobile navigation icons */}
           {isMobile && isScrolled ? (
             // Bottom dock navigation for mobile when scrolled
-            <div className="flex justify-around w-full">
+            <div className="flex justify-around w-full py-4">
               <button
                 onClick={() => navigateToSection("about")}
-                className="flex flex-col items-center text-white hover:text-teal-400 transition-colors"
+                className="flex flex-col items-center text-white hover:text-blue-400 transition-colors"
               >
                 <span className="text-sm">About</span>
               </button>
               <button
                 onClick={() => navigateToSection("services")}
-                className="flex flex-col items-center text-white hover:text-teal-400 transition-colors"
+                className="flex flex-col items-center text-white hover:text-blue-400 transition-colors"
               >
                 <span className="text-sm">Services</span>
               </button>
               <button
                 onClick={() => navigateToSection("projects")}
-                className="flex flex-col items-center text-white hover:text-teal-400 transition-colors"
+                className="flex flex-col items-center text-white hover:text-blue-400 transition-colors"
               >
                 <span className="text-sm">Projects</span>
               </button>
@@ -226,37 +226,37 @@ export default function Navbar() {
           <div className="flex flex-col items-center justify-center flex-1 gap-8">
             <button
               onClick={() => navigateToSection("about")}
-              className="text-xl font-medium text-white hover:text-teal-400 transition-colors"
+              className="text-xl font-medium text-white hover:text-blue-400 transition-colors"
             >
               About
             </button>
             <button
               onClick={() => navigateToSection("advantage")}
-              className="text-xl font-medium text-white hover:text-teal-400 transition-colors"
+              className="text-xl font-medium text-white hover:text-blue-400 transition-colors"
             >
               Advantage
             </button>
             <button
               onClick={() => navigateToSection("save-money")}
-              className="text-xl font-medium text-white hover:text-teal-400 transition-colors"
+              className="text-xl font-medium text-white hover:text-blue-400 transition-colors"
             >
               Savings
             </button>
             <button
               onClick={() => navigateToSection("services")}
-              className="text-xl font-medium text-white hover:text-teal-400 transition-colors"
+              className="text-xl font-medium text-white hover:text-blue-400 transition-colors"
             >
               Services
             </button>
             <button
               onClick={() => navigateToSection("projects")}
-              className="text-xl font-medium text-white hover:text-teal-400 transition-colors"
+              className="text-xl font-medium text-white hover:text-blue-400 transition-colors"
             >
               Projects
             </button>
             <button
               onClick={() => navigateToSection("team")}
-              className="text-xl font-medium text-white hover:text-teal-400 transition-colors"
+              className="text-xl font-medium text-white hover:text-blue-400 transition-colors"
             >
               Team
             </button>
