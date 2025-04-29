@@ -2,7 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, ArrowRight, CheckCircle, Clock, DollarSign, Users } from "lucide-react"
-import { cn } from "@/lib/utils"
 
 export default function SuccessMethodology() {
   return (
