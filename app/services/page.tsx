@@ -81,7 +81,7 @@ export default function ServicesPage() {
   ]
 
   return (
-    <main className="pt-24 pb-16">
+    <main className="pt-12 md:pt-24 pb-32 md:pb-16">
       <div className="container">
         <Link href="/#services">
           <Button variant="ghost" className="flex items-center gap-2 mb-6">

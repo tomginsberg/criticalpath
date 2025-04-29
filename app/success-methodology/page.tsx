@@ -1,12 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, CheckCircle, Clock, DollarSign, Users } from "lucide-react"
+import { ArrowLeft, ArrowRight, CheckCircle, Clock, DollarSign, Users } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export default function SuccessMethodology() {
   return (
-    <main className="pt-24 pb-16">
+    <main className="pt-12 md:pt-24 pb-32 md:pb-16">
       <div className="container">
         <div className="mb-12">
           <Link href="/#advantage">
@@ -237,11 +237,12 @@ export default function SuccessMethodology() {
           </div>
 
           {/* PDF Download Button - Desktop */}
-          <div className="text-center">
-            <a href="/success.pdf" target="_blank">
-              View Our Success Flowchart
-            </a>
-          </div>
+          <Link href="/success.pdf">
+            <Button variant="outline" className="group flex items-center gap-2 text-blue-400 hover:text-blue-600">
+              How We Make Your Project A Success
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       </div>
     </main>
