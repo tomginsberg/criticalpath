@@ -1,27 +1,11 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin } from "lucide-react"
-import { useForm, ValidationError } from '@formspree/react';
+import { LinkedInLink } from "@/components/ui/linkedin-link"
+import Link from "next/link"
 
 export default function Contact() {
-  const [state, handleSubmit] = useForm("xkgrgjgl");
-
-  if (state.succeeded) {
-    return (
-      <section id="contact" className="py-16 md:py-24 bg-gray-50">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Thank You!</h2>
-            <p className="text-lg text-gray-700">Your message has been sent successfully. We'll get back to you soon.</p>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section id="contact" className="py-16 md:py-24 bg-gray-50">
       <div className="container">
@@ -30,49 +14,54 @@ export default function Contact() {
           <p className="text-lg text-gray-700">Ready to discuss your project? Get in touch with our team today.</p>
         </div>
 
-        <div className="grid md:grid-cols-1 gap-12 max-w-5xl mx-auto">
-
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium">
-                  Name
-                </label>
-                <Input id="name" name="name" placeholder="Your name" required />
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium">
-                  Email
-                </label>
-                <Input id="email" name="email" type="email" placeholder="Your email" required />
-                <ValidationError prefix="Email" field="email" errors={state.errors} />
-              </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-6 rounded-md flex flex-col items-center text-center">
+              <LinkedInLink 
+                href="https://www.linkedin.com/in/criticalpathprojects/" 
+                className="text-gray-700 hover:text-blue-500 mb-4" 
+                iconSize={24} 
+                ariaLabel="Peter Nissenbaum's LinkedIn profile"
+              />
+              <h3 className="text-xl font-bold mb-2">Peter Nissenbaum</h3>
+              <Link href="mailto:peter@criticalpathprojects.com" className="text-blue-500 hover:text-blue-700 mb-1 md:text-sm lg:text-base">
+                peter@criticalpathprojects.com
+              </Link>
+              <p className="text-gray-600">416-995-6444</p>
             </div>
 
-            <div className="space-y-2">
-              <label htmlFor="subject" className="text-sm font-medium">
-                Subject
-              </label>
-              <Input id="subject" name="subject" placeholder="Subject" required />
+            <div className=" p-6  rounded-md flex flex-col items-center text-center">
+              <LinkedInLink 
+                href="https://www.linkedin.com/in/charlotte-nissenbaum-29a65641/" 
+                className="text-gray-700 hover:text-blue-500 mb-4" 
+                iconSize={24} 
+                ariaLabel="Charlotte Nissenbaum's LinkedIn profile"
+              />
+              <h3 className="text-xl font-bold mb-2">Charlotte Nissenbaum</h3>
+              <Link href="mailto:charlotte@criticalpathprojects.com" className="text-blue-500 hover:text-blue-700 mb-1 md:text-sm lg:text-base">
+                charlotte@criticalpathprojects.com
+              </Link>
+              <p className="text-gray-600">647-828-8326</p>
             </div>
 
-            <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium">
-                Message
-              </label>
-              <Textarea id="message" name="message" placeholder="Your message" rows={5} required />
-              <ValidationError prefix="Message" field="message" errors={state.errors} />
+            <div className=" p-6  rounded-md flex flex-col items-center text-center">
+              <LinkedInLink 
+                href="https://www.linkedin.com/in/jonah-nissenbaum-29038b154/" 
+                className="text-gray-700 hover:text-blue-500 mb-4" 
+                iconSize={24} 
+                ariaLabel="Jonah Nissenbaum's LinkedIn profile"
+              />
+              <h3 className="text-xl font-bold mb-2">Jonah Nissenbaum</h3>
+              <Link href="mailto:jonah@criticalpathprojects.com" className="text-blue-500 hover:text-blue-700 mb-1 md:text-sm lg:text-base">
+                jonah@criticalpathprojects.com
+              </Link>
+              <p className="text-gray-600">416-937-9496</p>
             </div>
+          </div>
 
-            <Button 
-              variant="outline" 
-              type="submit" 
-              className="w-full rounded-none"
-              disabled={state.submitting}
-            >
-              {state.submitting ? "Sending..." : "Send Message"}
-            </Button>
-          </form>
+          <div className="text-center mt-12">
+            <p className="text-gray-600">We are based in Toronto, Canada and welcome your inquiries.</p>
+          </div>
         </div>
       </div>
     </section>

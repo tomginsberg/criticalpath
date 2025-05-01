@@ -77,7 +77,7 @@ export default function Services() {
               <CardDescription className="text-gray-700 text-base">
                 Carefully managing the actual construction is critical to your project's success. Critical Path Projects
                 closely oversees all aspects of tender and construction execution to ensure your project runs on budget
-                and on schedule. We also work hard to solve problems that inevitably come up on a construction project.
+                and on schedule. We also work hard to solve the problems that inevitably come up on a construction project.
               </CardDescription>
             </CardContent>
           </Card>

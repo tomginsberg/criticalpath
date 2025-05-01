@@ -26,7 +26,7 @@ export const GoogleGeminiEffect = ({
       </p>
       {/* <div className="py-6 sm:hidden"/> */}
       <p className="relative z-10 px-16 md:px-4 text-lg md:text-xl font-normal text-center text-neutral-800 mt-4 max-w-lg mx-auto">
-      Building success through meticulous management
+      Building success through active, consistent and meticulous management
       </p>
       
 
@@ -34,21 +34,19 @@ export const GoogleGeminiEffect = ({
       <div className="container relative max-w-3xl py-8 space-y-8 z-10">
             <div className="flex items-start space-x-4 bg-white/40 backdrop-blur-sm  p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200/50">
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                From assembling the right design and engineering teams to making top-tier contractors compete for your
-                business, we handle the details others overlook. That's how we keep your project on time, on budget, and
-                aligned with your vision — every time.
+              From assembling the right design and engineering teams to making top-tier contractors compete for your business, we handle the details others overlook. That's how we keep your project on time, on budget, and fully aligned with your vision — every time.
               </p>
             </div>
 
             <div className="flex items-start space-x-4 bg-white/30 backdrop-blur-sm  p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200/50">
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                You've heard the horror stories: projects running late, going over budget, or falling apart midstream.
+              You've heard the horror stories: projects running late, going over budget, or falling apart midstream.  Our experience and process are built to ensure yours isn’t one of them.
               </p>
             </div>
 
             <div className="flex items-start space-x-4 bg-blue-50/50 backdrop-blur-sm  p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-blue-100/50">
               <p className="text-lg md:text-xl text-gray-900 leading-relaxed font-medium">
-                Our only business is managing the entire construction process — so those stories never become yours.
+              Construction management is all we do — so those stories are <span className="underline">never</span> your stories.
               </p>
             </div>
           </div>

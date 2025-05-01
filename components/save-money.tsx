@@ -89,7 +89,7 @@ export default function SaveMoney() {
               <div>
                 <p className="text-lg text-gray-100">
                   <span className="font-medium text-white">
-                    Using our expertise to negotiate savings on big ticket items you would otherwise pay full price for.
+                    Using our expertise and experience to negotiate savings on big ticket items you would otherwise pay full price for.
                   </span>
                 </p>
               </div>

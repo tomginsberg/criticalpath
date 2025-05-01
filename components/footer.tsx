@@ -13,11 +13,11 @@ export default function Footer() {
                 className="invert h-16"
               />
             <p className="text-sm">
-              We are based in Toronto, Canada and welcome your inquiries.
+            Building success through meticulous management
             </p>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-white font-medium mb-4">Contact us directly</h3>
             <ul className="space-y-4">
               <li className="flex items-center gap-2">
@@ -60,7 +60,7 @@ export default function Footer() {
                 </div>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm flex justify-between items-center">
