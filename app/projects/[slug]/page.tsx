@@ -34,13 +34,30 @@ export default function ProjectPage({ params }: PageProps<ProjectParams>) {
   }
   
   // Read markdown content from file
-  const markdownPath = path.join(process.cwd(), project.storyFile)
   let markdownContent = ""
   
   try {
-    markdownContent = fs.readFileSync(markdownPath, 'utf8')
+    // Absolute path for server component
+    const markdownPath = path.join(process.cwd(), 'data', 'projects-md', `${params.slug}.md`)
+    
+    if (fs.existsSync(markdownPath)) {
+      markdownContent = fs.readFileSync(markdownPath, 'utf8')
+    } else {
+      // Try the path specified in the project data as fallback
+      const fallbackPath = path.join(process.cwd(), project.storyFile)
+      if (fs.existsSync(fallbackPath)) {
+        markdownContent = fs.readFileSync(fallbackPath, 'utf8')
+      } else {
+        console.error(`Markdown file not found for project ${project.id}. Tried paths: ${markdownPath}, ${fallbackPath}`)
+      }
+    }
   } catch (error) {
     console.error(`Error reading markdown file for project ${project.id}:`, error)
+  }
+
+  // If we still don't have content, set a placeholder message
+  if (!markdownContent) {
+    markdownContent = "Project description is currently being updated."
   }
 
   return (

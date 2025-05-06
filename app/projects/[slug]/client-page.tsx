@@ -301,7 +301,11 @@ export default function ClientProjectPage({ params, project, markdownContent, al
             )}
             
             <div className="prose prose-slate max-w-none mb-8">
-              <ReactMarkdown>{markdownContent}</ReactMarkdown>
+              {markdownContent ? (
+                <ReactMarkdown>{markdownContent}</ReactMarkdown>
+              ) : (
+                <p className="text-amber-600">Project description is being updated.</p>
+              )}
             </div>
 
             {project?.testimonial && (

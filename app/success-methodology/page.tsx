@@ -235,12 +235,17 @@ export default function SuccessMethodology() {
           </div>
 
           {/* PDF Download Button - Desktop */}
-          <Link href="/success.pdf">
-            <Button variant="outline" className="group flex items-center gap-2 text-blue-400 hover:text-blue-600">
+          <div className="flex justify-center mt-8">
+            <a 
+              href="/success.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md text-blue-500 hover:text-blue-600 hover:border-blue-300 transition-colors"
+            >
               How We Make Your Project A Success
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
+            </a>
+          </div>
         </div>
       </div>
     </main>
