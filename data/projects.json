@@ -13,7 +13,8 @@
       "/projects/canadian-tire/img4.jpg",
       "/projects/canadian-tire/img5.jpg",
       "/projects/canadian-tire/img6.jpg"
-    ]
+    ],
+    "tags": ["retail", "expansion", "commercial", "new construction"]
   },
   {
     "id": "woodgreen",
@@ -21,7 +22,8 @@
     "caption": "High-Rise Zero Carbon Retrofit",
     "storyFile": "/data/projects-md/woodgreen.md",
     "image": "/projects/cmhc.jpg",
-    "gallery": []
+    "gallery": [],
+    "tags": ["retrofit", "sustainability", "zero carbon", "residential", "high-rise"]
   },
   {
     "id": "bcg",
@@ -45,7 +47,8 @@
       "/projects/bcg/img7.jpg",
       "/projects/bcg/img8.jpg",
       "/projects/bcg/img9.jpg"
-    ]
+    ],
+    "tags": ["office", "interior", "fit-out", "corporate", "award-winning"]
   },
   {
     "id": "nike",
@@ -65,7 +68,8 @@
       "/projects/nike/img7.jpg",
       "/projects/nike/img8.jpg",
       "/projects/nike/img9.jpg"
-    ]
+    ],
+    "tags": ["office", "corporate", "interior", "new construction"]
   },
   {
     "id": "government-of-canada",
@@ -86,7 +90,8 @@
       "/projects/government-of-canada/img7.jpg",
       "/projects/government-of-canada/img8.jpg",
       "/projects/government-of-canada/img9.jpg"
-    ]
+    ],
+    "tags": ["government", "research", "specialty", "greenhouse", "scientific"]
   },
   {
     "id": "cbc",
@@ -94,7 +99,8 @@
     "caption": "New Master Control Facility",
     "storyFile": "/data/projects-md/cbc.md",
     "image": "/projects/cbc.jpg",
-    "gallery": []
+    "gallery": [],
+    "tags": ["broadcast", "media", "facility", "technical", "specialty"]
   },
   {
     "id": "mckesson",
@@ -112,7 +118,8 @@
       "/projects/mckesson/img6.jpg",
       "/projects/mckesson/img7.jpg",
       "/projects/mckesson/img8.jpg"
-    ]
+    ],
+    "tags": ["office", "corporate", "headquarters", "interior"]
   },
   {
     "id": "connor-clark-and-lunn",
@@ -129,7 +136,8 @@
       "/projects/connor-clark-and-lunn/img5.jpg",
       "/projects/connor-clark-and-lunn/img6.jpg",
       "/projects/connor-clark-and-lunn/img7.jpg"
-    ]
+    ],
+    "tags": ["office", "corporate", "financial", "interior"]
   },
   {
     "id": "strellson",
@@ -143,7 +151,8 @@
       "/projects/strellson/img2.jpg",
       "/projects/strellson/img3.jpg",
       "/projects/strellson/img4.jpg"
-    ]
+    ],
+    "tags": ["retail", "commercial", "mall", "interior", "fashion"]
   },
   {
     "id": "uoft",
@@ -156,7 +165,8 @@
       "/projects/uoft/img1.jpg",
       "/projects/uoft/img2.jpg",
       "/projects/uoft/img3.jpg"
-    ]
+    ],
+    "tags": ["educational", "restoration", "historic", "heritage", "exterior"]
   },
   {
     "id": "candu",
@@ -172,7 +182,8 @@
       "/projects/candu/img4.jpg",
       "/projects/candu/img5.jpg",
       "/projects/candu/img6.jpg"
-    ]
+    ],
+    "tags": ["laboratory", "scientific", "nuclear", "technical", "specialty"]
   },
   {
     "id": "anderson-water-systems",
@@ -190,7 +201,8 @@
       "/projects/anderson-water-systems/img6.jpg",
       "/projects/anderson-water-systems/img7.jpg",
       "/projects/anderson-water-systems/img8.jpg"
-    ]
+    ],
+    "tags": ["office", "corporate", "industrial", "manufacturing", "consolidation"]
   },
   {
     "id": "trinity-college",
@@ -204,7 +216,8 @@
       "/projects/trinity-college/img2.jpg",
       "/projects/trinity-college/img3.jpg",
       "/projects/trinity-college/img4.jpg"
-    ]
+    ],
+    "tags": ["educational", "sustainability", "geothermal", "heritage", "accessibility"]
   },
   {
     "id": "byron-capital-markets",
@@ -218,7 +231,8 @@
       "/projects/byron-capital-markets/img2.jpg",
       "/projects/byron-capital-markets/img3.jpg",
       "/projects/byron-capital-markets/img4.jpg"
-    ]
+    ],
+    "tags": ["office", "financial", "corporate", "interior"]
   },
   {
     "id": "ontario-trillium-foundation",
@@ -234,13 +248,15 @@
       "/projects/ontario-trillium-foundation/img4.jpg",
       "/projects/ontario-trillium-foundation/img5.jpg",
       "/projects/ontario-trillium-foundation/img6.jpg"
-    ]
+    ],
+    "tags": ["office", "non-profit", "government", "interior"]
   },
 {
   "id": "alterna-savings",
   "title": "Alterna Savings",
   "caption": "New Office Space",
   "storyFile": "/data/projects-md/alterna-savings.md",
-  "image": "/projects/alterna-savings.jpg"
+  "image": "/projects/alterna-savings.jpg",
+  "tags": ["office", "financial", "banking", "interior"]
 }
 ]

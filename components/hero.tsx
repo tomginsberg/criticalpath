@@ -61,22 +61,7 @@ export default function Hero() {
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">
           With nearly 30 years of experience managing construction projects across Canada, we save you time, money, and stress by carefully managing your commercial relocation, renovation, or ground-up retail build — even in live, occupied spaces.  Our long experience lets us know where to look for the inevitable issues that are part of construction and get ahead of each and every one of them.  We don’t just react — we plan ahead, solve problems early, and keep your project on track from day one.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-white rounded-none text-black hover:bg-white/10 hover:text-white"
-              onClick={() => {
-                const element = document.getElementById("services")
-                if (element) {
-                  element.scrollIntoView({ behavior: "smooth" })
-                }
-              }}
-            >
-              Learn More
-            </Button>
-          </div>
+
         </div>
 
         <div className="flex flex-row xl:grid grid-cols-2 gap-2 xl:gap-8 xl:items-center">
