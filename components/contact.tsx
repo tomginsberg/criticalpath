@@ -24,10 +24,14 @@ export default function Contact() {
                 ariaLabel="Peter Nissenbaum's LinkedIn profile"
               />
               <h3 className="text-xl font-bold mb-2">Peter Nissenbaum</h3>
-              <Link href="mailto:peter@criticalpathprojects.com" className="text-blue-500 hover:text-blue-700 mb-1 md:text-sm lg:text-base">
+                <Link href="mailto:peter@criticalpathprojects.com" className="text-blue-500 hover:text-blue-700 mb-1 md:text-sm lg:text-base flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
                 peter@criticalpathprojects.com
-              </Link>
-              <p className="text-gray-600">416-995-6444</p>
+                </Link>
+                    <Link href="tel:4169956444" className="text-blue-500 hover:text-blue-700 flex items-center">
+                    <Phone className="w-4 h-4 mr-2" />
+                    416-995-6444
+                    </Link>
             </div>
 
             <div className=" p-6  rounded-md flex flex-col items-center text-center">
@@ -38,10 +42,14 @@ export default function Contact() {
                 ariaLabel="Charlotte Nissenbaum's LinkedIn profile"
               />
               <h3 className="text-xl font-bold mb-2">Charlotte Nissenbaum</h3>
-              <Link href="mailto:charlotte@criticalpathprojects.com" className="text-blue-500 hover:text-blue-700 mb-1 md:text-sm lg:text-base">
+              <Link href="mailto:charlotte@criticalpathprojects.com" className="text-blue-500 hover:text-blue-700 mb-1 md:text-sm lg:text-base flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
                 charlotte@criticalpathprojects.com
               </Link>
-              <p className="text-gray-600">647-828-8326</p>
+              <Link href="tel:6478288326" className="text-blue-500 hover:text-blue-700 flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                647-828-8326
+              </Link>
             </div>
 
             <div className=" p-6  rounded-md flex flex-col items-center text-center">
@@ -52,10 +60,14 @@ export default function Contact() {
                 ariaLabel="Jonah Nissenbaum's LinkedIn profile"
               />
               <h3 className="text-xl font-bold mb-2">Jonah Nissenbaum</h3>
-              <Link href="mailto:jonah@criticalpathprojects.com" className="text-blue-500 hover:text-blue-700 mb-1 md:text-sm lg:text-base">
+              <Link href="mailto:jonah@criticalpathprojects.com" className="text-blue-500 hover:text-blue-700 mb-1 md:text-sm lg:text-base flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
                 jonah@criticalpathprojects.com
               </Link>
-              <p className="text-gray-600">416-937-9496</p>
+              <Link href="tel:4169379496" className="text-blue-500 hover:text-blue-700 flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                416-937-9496
+              </Link>
             </div>
           </div>
 
