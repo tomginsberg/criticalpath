@@ -1,4 +1,6 @@
+"use client"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Check } from "lucide-react"
 
@@ -83,52 +85,78 @@ export default function ServicesPage() {
   return (
     <main className="pt-12 md:pt-24 pb-32 md:pb-16">
       <div className="container">
-        <Link href="/#services">
-          <Button variant="ghost" className="flex items-center gap-2 mb-6">
-            <ArrowLeft className="h-4 w-4" />
-            Back to Home
-          </Button>
-        </Link>
+        <div className="w-full sticky top-4 p-4 border rounded-xl md:relative md:pb-2 md:px-0 md:pt-0 md:border-none bg-background z-10 flex items-center mb-6">
+          <Link href="/#services" className="hidden md:block">
+            <Button variant="ghost" className="flex items-center gap-2">
+              <ArrowLeft className="h-4 w-4" />
+              Back to Home
+            </Button>
+          </Link>
+        </div>
 
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Our Services</h1>
-          <p className="text-xl text-gray-700 mb-12">
-            Critical Path Projects provides a wide variety of project management, design and construction related
-            services. Whether you engage us as full service project managers or simply choose one or more of the
-            services listed below, you can be confident that Critical Path Projects will always look after your
-            interests first.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+          <div>
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-2">Our Services</h1>
+            <p className="text-xl text-blue-400 font-medium mb-8">Comprehensive Project Management Solutions</p>
+            
+            <div className="prose prose-slate max-w-none mb-8">
+              <p className="text-lg text-gray-700">
+                Critical Path Projects provides a wide variety of project management, design and construction related
+                services. Whether you engage us as full service project managers or simply choose one or more of the
+                services listed below, you can be confident that Critical Path Projects will always look after your
+                interests first.
+              </p>
+            </div>
+          </div>
+          
+          <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg lg:sticky lg:top-24 lg:self-start">
+            <Image 
+              src="/images/construction-site.png" 
+              alt="Critical Path Projects Services" 
+              fill 
+              className="object-cover"
+              priority
+          
+            />
+          </div>
+        </div>
 
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="border-t border-gray-200 pt-12 mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Service Offerings</h2>
+          
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <div
                 key={index}
-                className=" p-6 border bg-gray-100 rounded-md"
+                className="bg-white p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 mt-1">
-
+                    <Check className="h-5 w-5 text-blue-500" />
                   </div>
                   <div>
-                    <h2 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h2>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
                     <p className="text-gray-700">{service.description}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+        </div>
 
-          <div className="mt-12  p-6  ">
-            <p className="text-gray-700 italic">
-              *Critical Path Projects can also be engaged for other construction related services not listed above.
-            </p>
-          </div>
+        <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-12">
+          <p className="text-gray-700 italic">
+            *Critical Path Projects can also be engaged for other construction related services not listed above.
+            Contact us to discuss your specific project needs.
+          </p>
+        </div>
 
-          <div className="mt-12 flex justify-center">
-            <Link href="/#contact">
-              <Button className=" " variant="outline">Contact Us About Our Services</Button>
-            </Link>
-          </div>
+        <div className="flex justify-center">
+          <Link href="/#contact">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+              Contact Us About Our Services
+            </Button>
+          </Link>
         </div>
       </div>
     </main>
