@@ -60,15 +60,18 @@ export default function Projects() {
                 {tag}
               </button>
             ))}
-            {activeFilter && (
+          </div>
+          {activeFilter && (
+            <div className="flex justify-center mt-4">
               <button
                 onClick={() => setActiveFilter(null)}
-                className="mt-4 px-3 py-1 rounded-full text-sm bg-gray-200 text-gray-700 hover:bg-gray-300"
+                className="px-3 py-1 rounded-full text-sm bg-gray-200 text-gray-700 hover:bg-gray-300 flex items-center gap-1"
               >
+                <X size={14} />
                 Clear filter
               </button>
-            )}
-          </div>
+            </div>
+          )}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
