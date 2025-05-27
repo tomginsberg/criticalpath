@@ -85,8 +85,8 @@ export default function ServicesPage() {
   return (
     <main className="pt-12 md:pt-24 pb-32 md:pb-16">
       <div className="container">
-        <div className="w-full sticky top-4 p-4 border rounded-xl md:relative md:pb-2 md:px-0 md:pt-0 md:border-none bg-background z-10 flex items-center mb-6">
-          <Link href="/#services" className="hidden md:block">
+        <div className="w-full top-4 p-4 border rounded-xl relative md:pb-2 md:px-0 md:pt-0 border-none bg-background z-10 hidden md:flex items-center mb-6">
+          <Link href="/#services">
             <Button variant="ghost" className="flex items-center gap-2">
               <ArrowLeft className="h-4 w-4" />
               Back to Home
