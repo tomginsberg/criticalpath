@@ -9,7 +9,7 @@ export default function Team() {
       name: "Peter Nissenbaum, PMP, MBA",
       role: "Senior Project Manager & Principal",
       bio: "Senior Project Manager with over 20 years professional experience in mission critical commercial construction, interiors, ground up, highrise and development. Extensive experience on behalf of project owners to manage clients, architects, consultants, engineers, landlords and contractors. Expert at providing independent third party consultation and management of construction projects for the owner. Strong ability to “see the big picture” has led to an outstanding record of planning and completing projects on time and on budget. Respected by colleagues and clients as having excellent leadership, communication and negotiation skills. Problem solving skills result in creative solutions to tough technical and design issues on large, fast track projects. Expert at mitigating risk from construction in mission critical facilities.",
-      image: "/images/peter.png",
+      image: "/headshots/peter.JPG",
       linkedIn: "https://www.linkedin.com/in/criticalpathprojects/",
       education: [
         "Project Management Professional (PMP), Project Management Institute",
@@ -22,7 +22,7 @@ export default function Team() {
       name: "Charlotte Nissenbaum, B.Sc., MBA",
       role: "Senior Project Manager and Principal",
       bio: "Charlotte has over 20 years of experience as a Senior Project Manager in commercial interior construction and development. She has successfully led construction and relocation projects for Fortune 500 companies, from initial planning and budgeting through contractor selection, construction, and move management. Her skills and dedication ensure projects run smoothly and meet client needs. Charlotte’s extensive work with owners, architects, engineers, landlords, and contractors has built a strong track record of on-time, on-budget project delivery. Specialties: Construction and development planning, Client Relationship Management, Project and Budget Management, Contractor Selection, Negotiation, Value Analysis, Cost Reduction, Team Leadership, and Logical Problem Solving. She combines strong people skills, execution expertise, and attention to detail across every project.",
-      image: "/images/charlotte.jpeg",
+      image: "/headshots/charlotte.JPG",
       linkedIn: "https://www.linkedin.com/in/charlotte-nissenbaum-29a65641/",
       education: ["M.B.A. (Awarded with Distinction) University of Warwick, Coventry, England.", "B.Sc. (Physics, 1st Class Honors) Bristol University, England."]
     },
@@ -31,7 +31,7 @@ export default function Team() {
       name: "Jonah Nissenbaum, B.Eng",
       role: "Project Manager",
       bio: "Jonah is an accomplished project manager with a B.Eng in Water Resource Engineering from the University of Guelph and a Certificate of Business from the Lang School of Business. He excels in budgeting, tender processes, and scope development for capital projects—ensuring every initiative is financially viable and competitively priced. His keen eye for value-add opportunities consistently enhances construction project outcomes. Drawing on a robust background in Construction Management, ground-up construction, and Engineering Design, Jonah adeptly coordinates resources and teams while effectively managing communications with general contractors, architects, engineers, landlords, owners, and other key stakeholders. His strategic approach ensures projects are delivered on time and within budget, every time. With a commitment to excellence and a proven track record, Jonah is dedicated to driving project success from concept to completion.",
-      image: "/images/jonah.jpg",
+      image: "/headshots/jonah.JPG",
       linkedIn: "https://www.linkedin.com/in/jonah-nissenbaum-29038b154/",
       education: ["Bachelor of Engineering, Water Resource Engineering, University of Guelph",
         "Certificate of Business, Lang School of Business, University of Guelph"]
@@ -54,9 +54,17 @@ export default function Team() {
             // Card uses flex flex-col
             <Card key={member.id} className="overflow-hidden flex flex-col">
               {/* Image container prevents shrinking */}
-              {/* <div className="relative h-64 w-full flex-shrink-0">
-                <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
-              </div> */}
+              <div className="w-full flex-shrink-0">
+                <Image
+                  src={member.image || "/placeholder.svg"}
+                  alt={member.name}
+                  width={625}
+                  height={500}
+                  className="w-full h-auto object-contain rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  priority
+                />
+              </div>
               {/* CardContent fills remaining space and arranges children vertically */}
               <CardContent className="p-6 flex flex-col flex-grow">
                 {/* Name/Role/Link section prevents shrinking */}
