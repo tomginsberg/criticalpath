@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Critical Path Projects",
     images: [
       {
-        url: "https://criticalpath.vercel.app/images/og.png",
+        url: "https://criticalpathprojects.com/images/og.png",
         width: 1200,
         height: 630,
         alt: "Critical Path Projects",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Critical Path Projects - Construction Project Management",
     description: "Expert project management for commercial construction and renovation projects across Canada.",
-    images: ["https://criticalpath.vercel.app/og.png"],
+    images: ["https://criticalpathprojects.com/images/og.png"],
   },
 };
 
