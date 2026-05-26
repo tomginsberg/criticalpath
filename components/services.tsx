@@ -1,94 +1,90 @@
-import { ArrowRight, Building2, ClipboardList, HardHat } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
 export default function Services() {
   return (
-    <section id="services" className="py-16 md:py-24 bg-slate-200">
+    <section id="services" className="py-24 md:py-32 bg-background">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-          <p className="text-lg text-gray-700">
-            Critical Path Projects provides a wide variety of project management, design and construction related
-            services. Whether you engage us as full service project managers or simply choose one or more of the
-            services listed below, you can be confident that Critical Path Projects will always look after your
+        <div className="max-w-3xl mb-16">
+          <p className="text-sm font-semibold tracking-[0.15em] uppercase text-accent mb-6">
+            What We Do
+          </p>
+          <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-foreground leading-[1.1] mb-6">
+            Our Services
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-[60ch]">
+            Whether you engage us as full service project managers or choose
+            individual services, Critical Path Projects always looks after your
             interests first.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card>
-            <CardHeader className="pb-2">
-              
-              <CardTitle>Full Service Project<br/> Management</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Image
-                src="/services/s1.jpg"
-                alt="Placeholder image"
-                width={400}
-                height={400}
-                className="object-cover rounded-sm mb-4"
-              />
-              <CardDescription className="text-gray-700 text-base">
-                Includes full management of your project from inception to final close out and move - we'll work with
-                you and be by your side every step of the way. It includes all of the services listed plus any other
-                services your specific project requires.
-              </CardDescription>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="pb-2">
-   
-              <CardTitle>Scope, Budget, and Schedule Development</CardTitle>
-            </CardHeader>
-            <CardContent>
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-24">
+          <div className="relative aspect-[4/3] overflow-hidden order-2 md:order-1">
             <Image
-                src="/services/s2.jpg"
-                alt="Placeholder image"
-                width={400}
-                height={400}
-                className="object-cover rounded-sm mb-4"
-              />
-              <CardDescription className="text-gray-700 text-base">
-                Getting started on your project is tough. Knowing who can help you develop the scope, initial budgets
-                and schedule is critical for you to make a decision to go forward with a project. We can help you in the
-                initial stages by clarifying these steps and providing information.
-              </CardDescription>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="pb-2">
-
-              <CardTitle>Bidding, Execution and Control of Construction</CardTitle>
-            </CardHeader>
-            <CardContent>
-            <Image
-                src="/services/s3.jpg"
-                alt="Placeholder image"
-                width={400}
-                height={400}
-                className="object-cover rounded-sm mb-4 "
-              />
-              <CardDescription className="text-gray-700 text-base">
-                Carefully managing the actual construction is critical to your project's success. Critical Path Projects
-                closely oversees all aspects of tender and construction execution to ensure your project runs on budget
-                and on schedule. We also work hard to solve the problems that inevitably come up on a construction project.
-              </CardDescription>
-            </CardContent>
-          </Card>
+              src="/services/s1.jpg"
+              alt="Full service project management"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="order-1 md:order-2">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Full Service Project Management
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-[50ch]">
+              Complete management from inception to final close-out and move. We
+              work with you every step of the way — design, engineering,
+              tendering, construction oversight, and beyond.
+            </p>
+          </div>
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <div>
+            <div className="relative aspect-[3/2] overflow-hidden mb-6">
+              <Image
+                src="/services/s2.jpg"
+                alt="Scope and budget development"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <h3 className="font-display text-xl font-bold text-foreground mb-3">
+              Scope, Budget &amp; Schedule Development
+            </h3>
+            <p className="text-muted-foreground leading-relaxed max-w-[50ch]">
+              Getting started is tough. We clarify the initial scope, develop
+              realistic budgets, and build schedules that give you the confidence
+              to move forward.
+            </p>
+          </div>
+          <div>
+            <div className="relative aspect-[3/2] overflow-hidden mb-6">
+              <Image
+                src="/services/s3.jpg"
+                alt="Bidding and construction execution"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <h3 className="font-display text-xl font-bold text-foreground mb-3">
+              Bidding, Execution &amp; Control
+            </h3>
+            <p className="text-muted-foreground leading-relaxed max-w-[50ch]">
+              We closely oversee all aspects of tender and construction execution —
+              managing budgets, solving problems, and keeping your project on track.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12 lg:mt-16">
           <Link href="/services">
-          <Button variant="outline" className="group flex items-center gap-2">
-            See More Services
+            <span className="group inline-flex items-center gap-3 text-sm font-semibold tracking-wide uppercase text-foreground hover:text-accent transition-colors duration-200 cursor-pointer">
+              See All Services
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            </span>
           </Link>
         </div>
       </div>
