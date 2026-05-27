@@ -31,3 +31,15 @@ www.criticalpathprojects.com.har
 public/projects/.DS_Store
 public/.DS_Store
 .DS_Store
+
+cms/node_modules
+cms/.next
+cms/out
+cms/build
+cms/npm-debug.log*
+cms/yarn-debug.log*
+cms/yarn-error.log*
+cms/.pnpm-debug.log*
+cms/.env*
+cms/.vercel
+cms/.DS_Store
