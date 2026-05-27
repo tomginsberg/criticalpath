@@ -6,20 +6,7 @@ import { ArrowLeft, X, Maximize } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ReactMarkdown from "react-markdown"
 import { useState, useEffect } from "react"
-
-interface Project {
-  id: string;
-  title: string;
-  caption: string;
-  storyFile: string;
-  image: string;
-  gallery?: string[];
-  testimonial?: {
-    quote: string;
-    author: string;
-    position: string;
-  };
-}
+import type { Project } from "@/lib/projects"
 
 interface ClientProjectPageProps {
   params: {
@@ -32,7 +19,35 @@ interface ClientProjectPageProps {
 function ImageGallery({ images, projectTitle }: { images: string[], projectTitle: string }) {
   const [selectedImage, setSelectedImage] = useState(images[0])
   const [isFullscreen, setIsFullscreen] = useState(false)
-  
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
+
+  // Minimum swipe distance threshold (in pixels)
+  const minSwipeDistance = 50
+
+  // Handle touch events for swipe functionality
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+    if (isLeftSwipe) {
+      navigateImage('next')
+    }
+    if (isRightSwipe) {
+      navigateImage('prev')
+    }
+  }
+
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -41,14 +56,14 @@ function ImageGallery({ images, projectTitle }: { images: string[], projectTitle
         if (e.key === 'Escape') {
           setIsFullscreen(false);
         }
-        
+
         // Navigate with arrow keys
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
           const currentIndex = images.indexOf(selectedImage);
           const nextIndex = (currentIndex + 1) % images.length;
           setSelectedImage(images[nextIndex]);
         }
-        
+
         if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
           const currentIndex = images.indexOf(selectedImage);
           const prevIndex = (currentIndex - 1 + images.length) % images.length;
@@ -56,7 +71,7 @@ function ImageGallery({ images, projectTitle }: { images: string[], projectTitle
         }
       }
     }
-    
+
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isFullscreen, images, selectedImage]);
@@ -73,11 +88,22 @@ function ImageGallery({ images, projectTitle }: { images: string[], projectTitle
     }
   };
 
+  // Reset touch state when fullscreen changes
+  useEffect(() => {
+    setTouchStart(null)
+    setTouchEnd(null)
+  }, [isFullscreen])
+
   return (
     <>
       <div className="space-y-8 lg:sticky lg:top-24 lg:self-start">
         {/* Main image display - shows the currently selected image */}
-        <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mb-4 group">
+        <div
+          className="relative aspect-video overflow-hidden rounded-lg shadow-lg mb-4 group"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           <Image 
             src={selectedImage} 
             alt={`${projectTitle} selected image`} 
@@ -119,7 +145,12 @@ function ImageGallery({ images, projectTitle }: { images: string[], projectTitle
 
       {/* Fullscreen overlay */}
       {isFullscreen && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           <div className="relative w-full h-full max-w-7xl max-h-screen p-4 md:p-8 flex flex-col">
             <div className="absolute top-4 right-4 z-10 flex gap-2">
               <button 
@@ -194,11 +225,7 @@ function ImageGallery({ images, projectTitle }: { images: string[], projectTitle
   )
 }
 
-interface ProjectPreviewProps {
-  project: Project;
-}
-
-function ProjectPreview({ project }: ProjectPreviewProps) {
+function ProjectPreview({ project }: { project: Project }) {
   return (
     <Link href={`/projects/${project.id}`} className="group block transform transition-all duration-300 hover:-translate-y-1">
       <div className="relative aspect-video overflow-hidden rounded-lg mb-2 shadow-md">
@@ -220,7 +247,11 @@ function ProjectPreview({ project }: ProjectPreviewProps) {
 
 export default function ClientProjectPage({ params, project, markdownContent, allProjects }: ClientProjectPageProps & { allProjects: Project[] }) {
   // Combine main image with gallery images for carousel
-  const allImages = [project.image || "/placeholder.svg", ...(project.gallery || [])]
+  // Filter out the cover image from gallery to prevent duplication
+  // (when image is auto-set to gallery[0], it would otherwise appear twice)
+  const gallery = project.gallery || []
+  const filteredGallery = gallery.filter(img => img !== project.image)
+  const allImages = [project.image || "/placeholder.svg", ...filteredGallery]
 
   // Get nearby projects and navigation indices
   const currentIndex = allProjects.findIndex(p => p.id === project.id)
@@ -308,9 +339,9 @@ export default function ClientProjectPage({ params, project, markdownContent, al
               )}
             </div>
 
-            {project?.testimonial && (
+            {project?.testimonial?.quote?.trim() && (
               <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                <blockquote className="text-gray-700 italic mb-4">"{project.testimonial.quote}"</blockquote>
+                <blockquote className="text-gray-700 italic mb-4">&ldquo;{project.testimonial.quote}&rdquo;</blockquote>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gray-300"></div>
                   <div>

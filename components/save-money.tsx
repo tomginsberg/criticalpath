@@ -1,102 +1,55 @@
-"use client"
-import { Check } from "lucide-react"
-import { useEffect, useRef } from "react"
+const WAYS_TO_SAVE = [
+  {
+    title: "Efficient design direction",
+    description: "The mechanical, electrical, and civil work is over half your budget. We instruct consultants to design as efficiently as possible, freeing up more for visible finishes.",
+  },
+  {
+    title: "Competitive tendering",
+    description: "Not all contractors want to compete — some are too busy. We find the ones who are eager, ready to work, and serious about earning your business.",
+  },
+  {
+    title: "Negotiated savings",
+    description: "Our expertise lets us negotiate significant savings on major line items — materials, trades, and scope you would otherwise pay full price for.",
+  },
+]
 
 export default function SaveMoney() {
-  const parallaxRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current) {
-        const scrollPosition = window.scrollY
-        // Move the background at a slower rate than the scroll speed
-        const yPos = scrollPosition * 0.3
-        parallaxRef.current.style.transform = `translate3d(0, ${yPos}px, 0)`
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
-
   return (
-    <section id="save-money" className="py-16 md:py-24 relative overflow-hidden">
-      {/* Parallax Background */}
-      <div 
-        ref={parallaxRef}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10"
-        style={{ 
-          backgroundImage: 'url("/ct.png")', 
-          height: '160%',
-          top: '-100%'
-        }}
-      />
-      
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/60 -z-10" />
+    <section
+      id="save-money"
+      className="relative py-24 md:py-32"
+      style={{ backgroundImage: 'url("/ct.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
+      <div className="absolute inset-0 bg-gray-900/78" />
 
       <div className="container relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-        <p className="px-8 text-4xl md:text-6xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-300 relative z-10 ">
-       How We Save You Money
-      </p>
-          <div className="h-1 w-24 bg-blue-300 mx-auto mb-8"></div>
-          <p className="text-left text-lg text-gray-100 mb-6">
-            A big part of what we do is save you money. We know where to look for opportunities to efficiently save on
-            your budget without compromising the design or quality of construction. In fact, on most projects, we will
-            save you more than our fees!
-          </p>
-        </div>
-        
-        <div className="max-w-3xl mx-auto">
-          <div className="space-y-6">
-            <div className="flex gap-4 items-start bg-white/10 backdrop-blur-sm p-6 rounded-lg hover:bg-white/20 transition-all duration-300">
-              <div className="mt-1 flex-shrink-0">
-                <Check className="h-5 w-5 text-blue-300" />
-              </div>
-              <div>
-                <p className="text-lg text-gray-100">
-                  <span className="font-medium text-white">
-                    Ensuring the design and engineering team has a clear budget to work to.
-                  </span>{" "}
-                  The parts of the project you don't see; the mechanical, electrical and civil work is over half of the
-                  project budget. We know how to instruct the consultant teams to design as efficiently as possible so
-                  you have more money to put toward the finishes you do see.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start bg-white/10 backdrop-blur-sm p-6 rounded-lg hover:bg-white/20 transition-all duration-300">
-              <div className="mt-1 flex-shrink-0">
-                <Check className="h-5 w-5 text-blue-300" />
-              </div>
-              <div>
-                <p className="text-lg text-gray-100">
-                  <span className="font-medium text-white">
-                    Ensuring all work is competitively tendered to contractors and subtrades who want your business and
-                    want to compete for your work.
-                  </span>{" "}
-                  Not all contractors want to compete and some are too busy to price competitively. We find the ones who
-                  are — ready to work and serious about earning your business.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start bg-white/10 backdrop-blur-sm p-6 rounded-lg hover:bg-white/20 transition-all duration-300">
-              <div className="mt-1 flex-shrink-0">
-                <Check className="h-5 w-5 text-blue-300" />
-              </div>
-              <div>
-                <p className="text-lg text-gray-100">
-                  <span className="font-medium text-white">
-                    Using our expertise and experience to negotiate savings on big ticket items you would otherwise pay full price for.
-                  </span>
-                </p>
-              </div>
+        <div className="max-w-3xl">
+          <div className="bg-black/50 px-4 py-2 rounded-lg backdrop-blur-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-500 mb-6 w-fit">
+              Cost management
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white leading-[1.1] mb-6">
+              How we save you money.
+            </h2>
+            <p className="text-gray-300 text-lg leading-relaxed max-w-prose mb-10">
+              On most projects, our savings exceed our fees. We know exactly where to find efficiencies without compromising design or quality.
+            </p>
+            <div className="divide-y divide-white/20">
+              {WAYS_TO_SAVE.map(({ title, description }, i) => (
+                <div key={title} className="py-6">
+                  <p className="text-amber-500 font-bold text-lg mb-3">
+                    {title}
+                  </p>
+                  <p className="text-gray-300 text-base leading-relaxed max-w-xl">
+                    {description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
+ 
     </section>
   )
 }
