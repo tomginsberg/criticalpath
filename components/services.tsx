@@ -1,94 +1,75 @@
-import { ArrowRight, Building2, ClipboardList, HardHat } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+"use client"
+
 import Link from "next/link"
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+
+const SERVICES = [
+  {
+    title: "Full Service Project Management",
+    description: "Complete management from inception to final closeout and move-in. We work beside you every step of the way, including all services below and any your specific project requires.",
+    image: "/images/management.jpeg",
+  },
+  {
+    title: "Scope, Budget, and Schedule Development",
+    description: "Getting started is the hardest part. We help you develop clear scope, initial budgets, and schedules so you can make informed decisions about moving forward.",
+    image: "/images/scope.jpeg",
+  },
+  {
+    title: "Bidding, Execution, and Control of Construction",
+    description: "We oversee every aspect of tender and construction execution to ensure your project stays on budget and on schedule, solving problems as they arise.",
+    image: "/images/Bidding.jpeg",
+  },
+]
 
 export default function Services() {
   return (
-    <section id="services" className="py-16 md:py-24 bg-slate-200">
+    <section id="services" className="py-24 md:py-32 bg-white">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-          <p className="text-lg text-gray-700">
-            Critical Path Projects provides a wide variety of project management, design and construction related
-            services. Whether you engage us as full service project managers or simply choose one or more of the
-            services listed below, you can be confident that Critical Path Projects will always look after your
-            interests first.
+        <div className="max-w-2xl mb-16">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-600 mb-6">
+            What we do
           </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-[1.1]">
+            Our services.
+          </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card>
-            <CardHeader className="pb-2">
-              
-              <CardTitle>Full Service Project<br/> Management</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Image
-                src="/services/s1.jpg"
-                alt="Placeholder image"
-                width={400}
-                height={400}
-                className="object-cover rounded-sm mb-4"
-              />
-              <CardDescription className="text-gray-700 text-base">
-                Includes full management of your project from inception to final close out and move - we'll work with
-                you and be by your side every step of the way. It includes all of the services listed plus any other
-                services your specific project requires.
-              </CardDescription>
-            </CardContent>
-          </Card>
+        <div className="space-y-24">
+          {SERVICES.map(({ title, description, image }, i) => (
+            <div
+              key={title}
+              className={`grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16 items-center ${
+                i % 2 === 1 ? 'lg:flex-row-reverse' : ''
+              }`}
+            >
+              <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  {description}
+                </p>
+              </div>
 
-          <Card>
-            <CardHeader className="pb-2">
-   
-              <CardTitle>Scope, Budget, and Schedule Development</CardTitle>
-            </CardHeader>
-            <CardContent>
-            <Image
-                src="/services/s2.jpg"
-                alt="Placeholder image"
-                width={400}
-                height={400}
-                className="object-cover rounded-sm mb-4"
-              />
-              <CardDescription className="text-gray-700 text-base">
-                Getting started on your project is tough. Knowing who can help you develop the scope, initial budgets
-                and schedule is critical for you to make a decision to go forward with a project. We can help you in the
-                initial stages by clarifying these steps and providing information.
-              </CardDescription>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="pb-2">
-
-              <CardTitle>Bidding, Execution and Control of Construction</CardTitle>
-            </CardHeader>
-            <CardContent>
-            <Image
-                src="/services/s3.jpg"
-                alt="Placeholder image"
-                width={400}
-                height={400}
-                className="object-cover rounded-sm mb-4 "
-              />
-              <CardDescription className="text-gray-700 text-base">
-                Carefully managing the actual construction is critical to your project's success. Critical Path Projects
-                closely oversees all aspects of tender and construction execution to ensure your project runs on budget
-                and on schedule. We also work hard to solve the problems that inevitably come up on a construction project.
-              </CardDescription>
-            </CardContent>
-          </Card>
+              <div className={`relative aspect-[4/3] overflow-hidden ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
+                <Image
+                  src={image}
+                  alt={title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 ring-1 ring-inset ring-black/10" />
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <Link href="/services">
-          <Button variant="outline" className="group flex items-center gap-2">
-            See More Services
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+        <div className="mt-16 pt-16 border-t border-gray-100">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 text-gray-900 font-semibold text-sm uppercase tracking-widest border-b-2 border-amber-500 pb-1 hover:border-gray-900 transition-colors duration-200 group"
+          >
+            See all services
+            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
           </Link>
         </div>
       </div>

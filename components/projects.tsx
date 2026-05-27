@@ -3,8 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, X } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import projectsData from "@/data/projects.json";
 
 // Extract all unique tags from projects
@@ -27,35 +26,62 @@ export default function Projects() {
     ? projectsData.filter((project) => project.tags?.includes(activeFilter))
     : projectsData;
 
-  const handleFilterClick = (tag: string) => {
-    setActiveFilter((prevTag) => (prevTag === tag ? null : tag));
+  // Limited display: 3 on mobile, 6 on tablet+/desktop
+  const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : true;
+  const initialLimit = 6;
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Mobile always shows 3 initially; desktop shows 6
+  const getInitialLimit = () => {
+    if (typeof window === 'undefined') return 3;
+    return window.innerWidth < 768 ? 3 : 6;
   };
 
+  const handleFilterClick = (tag: string) => {
+    setActiveFilter((prevTag) => (prevTag === tag ? null : tag));
+    setIsExpanded(false);
+  };
+
+  const limit = isExpanded ? filteredProjects.length : getInitialLimit();
+  const displayProjects = filteredProjects.slice(0, limit);
+
+  // Show more toggle
+  const showLoadMore = !isExpanded && filteredProjects.length > limit;
+
   return (
-    <section id="projects" className="py-16 md:py-24">
-      <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    <section id="projects" className="py-16 md:py-24" style={{ background: "oklch(0.985 0.003 240)" }}>
+      <div className="container max-w-6xl">
+
+        {/* Section header */}
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0337A0] mb-4">
+            Portfolio
+          </p>
+          <h2
+            className="font-bold text-[#021F59] mb-4"
+            style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
+          >
             Our Projects
           </h2>
-          <p className="text-lg text-gray-700">
-            Discover our portfolio of successful projects across various industries
-            and building types.
+          <p className="text-base leading-relaxed" style={{ color: "oklch(0.4 0.01 240)" }}>
+            A selection of completed work across commercial, retail, and institutional builds.
           </p>
         </div>
 
         {/* Tag filters */}
         <div className="mb-10">
-          <div className="flex flex-wrap gap-2 justify-center mt-4 pb-4">
+          <div className="flex flex-wrap gap-2 justify-center">
             {allTags.map((tag) => (
               <button
                 key={tag}
                 onClick={() => handleFilterClick(tag)}
-                className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                  activeFilter === tag
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                }`}
+                className={`px-4 py-2 text-xs font-medium tracking-wide transition-all duration-200 border ${activeFilter === tag
+                    ? "border-[#0337A0] text-white"
+                    : "border-[#021F59]/20 text-[#021F59]/70 hover:border-[#021F59]/40"
+                  }`}
+                style={{
+                  background: activeFilter === tag ? "#0337A0" : "transparent",
+                }}
               >
                 {tag}
               </button>
@@ -65,62 +91,86 @@ export default function Projects() {
             <div className="flex justify-center mt-4">
               <button
                 onClick={() => setActiveFilter(null)}
-                className="px-3 py-1 rounded-full text-sm bg-gray-200 text-gray-700 hover:bg-gray-300 flex items-center gap-1"
+                className="text-xs font-medium text-[#0337A0] hover:text-[#021F59] transition-colors flex items-center gap-1"
               >
-                <X size={14} />
+                <span className="w-4 h-4 inline-flex items-center justify-center rounded-full border border-[#0337A0]">×</span>
                 Clear filter
               </button>
             </div>
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
+        {/* Projects grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {displayProjects.map((project, i) => (
             <Link
               key={project.id}
               href={`/projects/${project.id}`}
-              className="group"
+              className="group block"
             >
-              <div className="relative aspect-video overflow-hidden rounded-lg shadow-md mb-4">
+              <div
+                className="relative overflow-hidden mb-4"
+                style={{ aspectRatio: "16/10" }}
+              >
                 <Image
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                {project.tags && project.tags.length > 0 && (
-                  <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                    {project.tags.slice(0, 3).map((tag) => (
-                      <span
-                        key={tag}
-                        className="inline-block bg-black/50 text-white text-xs px-2 py-0.5 rounded-sm"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                    {project.tags.length > 3 && (
-                      <span className="inline-block bg-black/50 text-white text-xs px-2 py-0.5 rounded-sm">
-                        +{project.tags.length - 3}
-                      </span>
-                    )}
-                  </div>
-                )}
+                {/* Minimal overlay on hover */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ background: "linear-gradient(to top, rgba(2,31,89,0.6) 0%, transparent 50%)" }}
+                />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-500 transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-gray-600">{project.caption}</p>
-              {/* View Project button - blue text without background */}
-              <div className="mt-4">
-                <div className="text-blue-500 font-medium flex items-center gap-1 transition-colors hover:text-blue-600">
-                  View Project
-                  <ArrowRight size={16} />
-                </div>
+
+              {/* Meta info inline, no cards */}
+              <div className="space-y-2">
+                <h3
+                  className="font-bold text-[#021F59] group-hover:text-[#0337A0] transition-colors"
+                  style={{ fontSize: "clamp(1rem, 2vw, 1.15rem)" }}
+                >
+                  {project.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.45 0.01 240)" }}>
+                  {project.caption}
+                </p>
+
+                {/* Tags as simple comma-separated text */}
+                {project.tags && project.tags.length > 0 && (
+                  <p className="text-xs tracking-wide uppercase" style={{ color: "oklch(0.6 0.01 240)" }}>
+                    {project.tags.slice(0, 3).join(", ")}
+                  </p>
+                )}
               </div>
             </Link>
           ))}
         </div>
+
+        {/* Load more / View all */}
+        {filteredProjects.length > 3 && (
+          <div className="flex justify-center mt-12">
+            {showLoadMore ? (
+              <button
+                onClick={() => setIsExpanded(true)}
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium border border-[#021F59]/30 text-[#021F59] hover:bg-[#021F59] hover:text-white hover:border-[#021F59] transition-all duration-200"
+              >
+                View more
+                <ArrowRight className="h-4 w-4" />
+              </button>
+            ) : (
+              <Link
+                href="/projects"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium bg-[#0337A0] text-white hover:bg-[#021F59] transition-all duration-200"
+              >
+                View all projects
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            )}
+          </div>
+        )}
+
       </div>
     </section>
   );

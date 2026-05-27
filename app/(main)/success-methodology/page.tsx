@@ -1,283 +1,192 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ArrowLeft, ArrowRight, CheckCircle, Clock, DollarSign, Users } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react"
+
+const pillars = [
+  {
+    number: "01",
+    title: "Schedule",
+    lead: "Keeping you on time",
+    points: [
+      "CPP creates a clear schedule that meets your project requirements from day one",
+      "Defined meeting cadences coordinate architects, designers, and engineers without gaps",
+      "Daily focus on milestone dates — no surprises late in the project",
+      "Expert management of all professionals to ensure on-time delivery",
+    ],
+  },
+  {
+    number: "02",
+    title: "Expectations",
+    lead: "Meeting your standards",
+    points: [
+      "Clearly defined project scope and objectives established before work begins",
+      "CPP sets up and manages all construction communications and site meetings",
+      "Comprehensive reporting keeps you informed at every stage",
+      "Our only focus is project management — no divided attention",
+    ],
+  },
+  {
+    number: "03",
+    title: "Budget",
+    lead: "Managing costs and value",
+    points: [
+      "Client needs are properly translated into construction drawings",
+      "Pre-construction investigations surface hidden site conditions early",
+      "Budget reflects total project costs — every soft cost accounted for",
+    ],
+  },
+]
 
 export default function SuccessMethodology() {
   return (
-    <main className="pt-12 md:pt-24 pb-32 md:pb-16">
-      <div className="container">
-        <div className="w-full hidden top-4 p-4 border rounded-xl md:relative md:pb-2 md:px-0 md:pt-0 md:border-none bg-background z-10 md:flex items-center mb-6">
-          <Link href="/#advantage" className="hidden md:block">
-            <Button variant="ghost" className="flex items-center gap-2">
-              <ArrowLeft className="h-4 w-4" />
-              Back to Home
-            </Button>
-          </Link>
-        </div>
+    <main className="pt-12 md:pt-24 pb-32 md:pb-20" style={{ background: "oklch(0.985 0.003 240)" }}>
+      <div className="container max-w-5xl">
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+        {/* Back nav */}
+        <Link
+          href="/#advantage"
+          className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-[#021F59]/60 hover:text-[#021F59] transition-colors mb-12"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Back to Home
+        </Link>
+
+        {/* Hero intro */}
+        <div className="grid lg:grid-cols-[1fr_380px] gap-16 items-start mb-20">
           <div>
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-2">How We Make Your Project a Success</h1>
-            <p className="text-xl text-blue-400 font-medium mb-8">Our Proven Methodology</p>
-            
-            <div className="prose prose-slate max-w-none mb-8">
-              <p className="text-lg text-gray-700">
-                Our systematic approach ensures your project is delivered on time, on budget, and
-                meets all your expectations. Critical Path Projects (CPP) takes full responsibility for 
-                delivering successful outcomes through careful planning, constant communication, and 
-                expert management of all project stakeholders.
-              </p>
-            </div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0337A0] mb-5">
+              Our Proven Methodology
+            </p>
+            <h1
+              className="font-bold text-[#021F59] mb-8 leading-[1.05]"
+              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+            >
+              How We Make Your Project a Success
+            </h1>
+            <p className="text-lg leading-relaxed max-w-[60ch]" style={{ color: "oklch(0.35 0.01 240)" }}>
+              CPP takes full responsibility for your outcome — not advisory, not oversight. We plan, coordinate,
+              and drive delivery across every stakeholder so your business isn't distracted by the build.
+            </p>
           </div>
-          
-          <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg lg:sticky lg:top-24 lg:self-start">
-            <Image 
-              src="/images/peter.png" 
-              alt="Critical Path Projects Success Methodology" 
-              fill 
+
+          <div
+            className="relative overflow-hidden lg:sticky lg:top-24 lg:self-start"
+            style={{ aspectRatio: "4/5" }}
+          >
+            <Image
+              src="/images/peter.png"
+              alt="Peter Nissenbaum, Principal — Critical Path Projects"
+              fill
               className="object-cover"
               priority
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src = "/placeholder.svg";
-              }}
             />
           </div>
         </div>
 
-        <div className="border-t border-gray-200 pt-12 mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Our Success Framework</h2>
-          
-          {/* Mobile view - simplified vertical flow */}
-          <div className="md:hidden space-y-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="bg-teal-100 p-2 rounded-full">
-                  <Clock className="h-6 w-6 text-teal-600" />
-                </div>
-                <h2 className="text-xl font-bold text-gray-900">Keeping You On Schedule</h2>
-              </div>
-              <ul className="space-y-3">
-                <li className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
-                  <p>CPP creates a clear schedule that meets project requirements</p>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
-                  <p>
-                    CPP ensures good communication and coordination between professionals (Architect, Designer, Engineers)
-                    through a defined meeting schedule
-                  </p>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
-                  <p>CPP focuses daily on schedule dates and ensures all stay on track</p>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
-                  <p>CPP is expert at managing architects, engineers and contractors to ensure delivery</p>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="bg-blue-100 p-2 rounded-full">
-                  <Users className="h-6 w-6 text-blue-600" />
-                </div>
-                <h2 className="text-xl font-bold text-gray-900">Meeting Client Expectations</h2>
-              </div>
-              <ul className="space-y-3">
-                <li className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
-                  <p>CPP ensures clearly defined project scope and objectives</p>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
-                  <p>CPP sets up and manages communications and construction Meetings</p>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
-                  <p>
-                    CPP responsible for comprehensive communication, paperwork & reporting processes put in place to manage
-                    the project
-                  </p>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
-                  <p>CPP's only focus is the Project Management</p>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="bg-purple-100 p-2 rounded-full">
-                  <DollarSign className="h-6 w-6 text-purple-600" />
-                </div>
-                <h2 className="text-xl font-bold text-gray-900">Managing Costs and Ensuring Value</h2>
-              </div>
-              <ul className="space-y-3">
-                <li className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
-                  <p>CPP ensures client needs are properly translated into construction drawings</p>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
-                  <p>CPP manages unforeseen site conditions through better pre-construction investigations</p>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
-                  <p>CPP makes sure the budget represents "Total" Project costs including all 'soft costs'</p>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-teal-50 p-6 rounded-lg border border-teal-200 text-center">
-              <div className="inline-flex justify-center items-center w-16 h-16 bg-teal-600 text-white rounded-full mb-4">
-                <CheckCircle className="h-8 w-8" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Project Schedule & Budget Met</h2>
-              <p className="text-gray-700">
-                Critical Path Projects represents your interests and is responsible for ensuring your project is delivered
-                on budget and on schedule.
-              </p>
-            </div>
-          </div>
-
-          {/* Desktop view - flowchart style */}
-          <div className="hidden md:block relative">
-            <div className="grid grid-cols-3 gap-8 mb-16">
-              {/* Column 1 */}
-              <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-teal-100 p-2 rounded-full">
-                    <Clock className="h-6 w-6 text-teal-600" />
-                  </div>
-                  <h2 className="text-xl font-bold text-gray-900">Keeping You On Schedule</h2>
-                </div>
-                <ul className="space-y-3">
-                  <li className="flex gap-3">
-                    <CheckCircle className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
-                    <p>CPP creates a clear schedule that meets project requirements</p>
-                  </li>
-                  <li className="flex gap-3">
-                    <CheckCircle className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
-                    <p>
-                      CPP ensures good communication and coordination between professionals (Architect, Designer,
-                      Engineers) through a defined meeting schedule
-                    </p>
-                  </li>
-                  <li className="flex gap-3">
-                    <CheckCircle className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
-                    <p>CPP focuses daily on schedule dates and ensures all stay on track</p>
-                  </li>
-                  <li className="flex gap-3">
-                    <CheckCircle className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
-                    <p>CPP is expert at managing architects, engineers and contractors to ensure delivery</p>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Column 2 */}
-              <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-blue-100 p-2 rounded-full">
-                    <Users className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <h2 className="text-xl font-bold text-gray-900">Meeting Client Expectations</h2>
-                </div>
-                <ul className="space-y-3">
-                  <li className="flex gap-3">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
-                    <p>CPP ensures clearly defined project scope and objectives</p>
-                  </li>
-                  <li className="flex gap-3">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
-                    <p>CPP sets up and manages communications and construction Meetings</p>
-                  </li>
-                  <li className="flex gap-3">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
-                    <p>
-                      CPP responsible for comprehensive communication, paperwork & reporting processes put in place to
-                      manage the project
-                    </p>
-                  </li>
-                  <li className="flex gap-3">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
-                    <p>CPP's only focus is the Project Management</p>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Column 3 */}
-              <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-purple-100 p-2 rounded-full">
-                    <DollarSign className="h-6 w-6 text-purple-600" />
-                  </div>
-                  <h2 className="text-xl font-bold text-gray-900">Managing Costs and Ensuring Value</h2>
-                </div>
-                <ul className="space-y-3">
-                  <li className="flex gap-3">
-                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
-                    <p>CPP ensures client needs are properly translated into construction drawings</p>
-                  </li>
-                  <li className="flex gap-3">
-                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
-                    <p>CPP manages unforeseen site conditions through better pre-construction investigations</p>
-                  </li>
-                  <li className="flex gap-3">
-                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
-                    <p>CPP makes sure the budget represents "Total" Project costs including all 'soft costs'</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Result box */}
-            <div className="bg-teal-50 p-8 rounded-lg border border-teal-200 text-center max-w-2xl mx-auto relative mb-12">
-              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 inline-flex justify-center items-center w-16 h-16 bg-teal-600 text-white rounded-full">
-                <CheckCircle className="h-8 w-8" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Project Schedule & Budget Met</h2>
-              <div className="flex items-center justify-center gap-6">
-                <p className="text-left text-lg text-gray-700">
-                  Critical Path Projects represents your interests and is responsible for ensuring your project is
-                  delivered on budget and on schedule.
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* Framework label */}
+        <div className="flex items-center gap-6 mb-12">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: "oklch(0.55 0.01 240)" }}>
+            Our Success Framework
+          </span>
+          <div className="flex-1 h-px" style={{ background: "oklch(0.82 0.008 240)" }} />
         </div>
 
-        <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-12">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Learn More About Our Success Methodology</h3>
-              <p className="text-gray-700">Download our detailed flowchart showing how we manage successful projects.</p>
+        {/* Three pillars — editorial rows */}
+        <div className="space-y-0">
+          {pillars.map((pillar, i) => (
+            <div
+              key={pillar.number}
+              className="grid md:grid-cols-[120px_1fr_1fr] gap-x-12 gap-y-6 py-12"
+              style={{
+                borderTop: i === 0 ? undefined : `1px solid oklch(0.82 0.008 240)`,
+              }}
+            >
+              {/* Number + category */}
+              <div className="flex md:flex-col gap-3 md:gap-1 items-baseline md:items-start">
+                <span
+                  className="font-bold leading-none tabular-nums"
+                  style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)", color: "oklch(0.88 0.008 240)" }}
+                >
+                  {pillar.number}
+                </span>
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#0337A0] md:mt-2">
+                  {pillar.title}
+                </span>
+              </div>
+
+              {/* Lead */}
+              <div>
+                <h2
+                  className="font-bold text-[#021F59] mb-0"
+                  style={{ fontSize: "clamp(1.15rem, 2vw, 1.4rem)" }}
+                >
+                  {pillar.lead}
+                </h2>
+              </div>
+
+              {/* Points */}
+              <ul className="space-y-3">
+                {pillar.points.map((point) => (
+                  <li key={point} className="flex gap-3 items-start">
+                    <span
+                      className="mt-[0.4em] shrink-0 w-1 h-1 rounded-full bg-[#0337A0]"
+                    />
+                    <p className="text-sm leading-relaxed max-w-[52ch]" style={{ color: "oklch(0.38 0.01 240)" }}>
+                      {point}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <a 
-              href="/success.pdf" 
-              target="_blank" 
+          ))}
+        </div>
+
+        {/* Outcome statement */}
+        <div
+          className="mt-4 mb-16 px-10 py-10"
+          style={{ background: "#021F59" }}
+        >
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40 mb-4">The Result</p>
+          <h2
+            className="font-bold text-white leading-[1.1] max-w-[42ch]"
+            style={{ fontSize: "clamp(1.4rem, 2.5vw, 2rem)" }}
+          >
+            Project schedule met. Budget held. No surprises.
+          </h2>
+          <p className="mt-4 text-white/70 text-sm leading-relaxed max-w-[58ch]">
+            Critical Path Projects represents your interests alone — and is solely responsible for ensuring your
+            project is delivered on budget and on schedule.
+          </p>
+        </div>
+
+        {/* Download + CTA */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+          <div>
+            <p className="font-semibold text-[#021F59] mb-1">Download Our Methodology</p>
+            <p className="text-sm" style={{ color: "oklch(0.55 0.01 240)" }}>
+              Detailed flowchart showing how we manage successful projects.
+            </p>
+          </div>
+          <div className="flex gap-4 shrink-0">
+            <a
+              href="/success.pdf"
+              target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium border border-[#021F59]/30 text-[#021F59] hover:bg-[#021F59] hover:text-white hover:border-[#021F59] transition-colors duration-200"
             >
               Download PDF
               <ArrowRight className="h-4 w-4" />
             </a>
+            <Link
+              href="/#contact"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-[#0337A0] text-white hover:bg-[#021F59] transition-colors duration-200"
+            >
+              Discuss a project
+            </Link>
           </div>
         </div>
 
-        <div className="flex justify-center">
-          <Link href="/#contact">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-              Contact Us To Discuss Your Project
-            </Button>
-          </Link>
-        </div>
       </div>
     </main>
   )
