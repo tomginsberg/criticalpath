@@ -92,5 +92,47 @@ export default config({
         }),
       },
     }),
+    media: collection({
+      label: 'Media',
+      slugField: 'title',
+      path: 'content/media/*',
+      schema: {
+        title: fields.slug({
+          name: {
+            label: 'Headline',
+            description: 'Title shown on the media card.',
+            validation: { isRequired: true },
+          },
+          slug: {
+            label: 'URL slug',
+            description: 'Used as the filename. Avoid changing after publishing.',
+          },
+        }),
+        publication: fields.text({
+          label: 'Publication',
+          description: 'Name of the outlet, e.g. CBC News.',
+          validation: { isRequired: true },
+        }),
+        publishedAt: fields.date({
+          label: 'Published date',
+          validation: { isRequired: true },
+        }),
+        url: fields.url({
+          label: 'Article URL',
+          validation: { isRequired: true },
+        }),
+        description: fields.text({
+          label: 'Description',
+          description: 'A catchy one-liner shown on the media card.',
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        image: fields.image({
+          label: 'Cover image',
+          directory: 'public/images',
+          publicPath: '/images/',
+        }),
+      },
+    }),
   },
 });

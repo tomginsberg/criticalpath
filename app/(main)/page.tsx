@@ -4,6 +4,7 @@ import Advantage from "@/components/advantage"
 import SaveMoney from "@/components/save-money"
 import Services from "@/components/services"
 import ProjectsSection from "@/components/projects/projects-section"
+import MediaSection from "@/components/media/media-section"
 import Clients from "@/components/clients"
 import Team from "@/components/team"
 import Contact from "@/components/contact"
@@ -18,6 +19,7 @@ export default function Home() {
       <SaveMoney />
       <Services />
       <ProjectsSection />
+      <MediaSection />
       <Team />
       <Contact />
       <Footer />

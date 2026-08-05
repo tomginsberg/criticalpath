@@ -144,6 +144,12 @@ export default function Navbar() {
               Projects
             </button>
             <button
+              onClick={() => navigateToSection("media")}
+              className="text-sm font-medium text-white hover:text-blue-400 transition-colors"
+            >
+              Media
+            </button>
+            <button
               onClick={() => navigateToSection("team")}
               className="text-sm font-medium text-white hover:text-blue-400 transition-colors"
             >
@@ -178,6 +184,12 @@ export default function Navbar() {
                 className="flex flex-col items-center text-white hover:text-blue-400 transition-colors"
               >
                 <span className="text-sm">Projects</span>
+              </button>
+              <button
+                onClick={() => navigateToSection("media")}
+                className="flex flex-col items-center text-white hover:text-blue-400 transition-colors"
+              >
+                <span className="text-sm">Media</span>
               </button>
               <button onClick={() => setIsMobileMenuOpen(true)}>
                 <span className="sr-only">Open menu</span>
@@ -253,6 +265,12 @@ export default function Navbar() {
               className="text-xl font-medium text-white hover:text-blue-400 transition-colors"
             >
               Projects
+            </button>
+            <button
+              onClick={() => navigateToSection("media")}
+              className="text-xl font-medium text-white hover:text-blue-400 transition-colors"
+            >
+              Media
             </button>
             <button
               onClick={() => navigateToSection("team")}
