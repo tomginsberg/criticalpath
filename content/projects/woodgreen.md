@@ -2,13 +2,15 @@
 title: WoodGreen
 caption: High-Rise Zero Carbon Retrofit
 image: /projects/woodgreen/image.jpg
-gallery: []
+gallery:
+  - /projects/woodgreen/gallery/0.jpg
+  - /projects/woodgreen/gallery/1.jpg
 tags:
   - retrofit
   - sustainability
+  - high-rise
   - zero carbon
   - residential
-  - high-rise
 testimonial: {}
 order: 2
 ---
