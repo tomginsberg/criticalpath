@@ -46,22 +46,22 @@ export default function Hero() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
           <div className="max-w-4xl">
 
-            <h1 className="max-w-5xl text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
-              <span className="text-amber-500">You have a business to run.</span>
+            <h1 className="max-w-5xl text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)] md:text-6xl lg:text-7xl">
+              You have a business to run.
               <br />
-              <span className="text-amber-500">Let us manage your construction.</span>
+              Let us manage your construction.
             </h1>
             <p className="mt-5 max-w-2xl text-lg font-medium leading-relaxed text-white/80 md:text-xl">
               Commercial relocations, renovations, retrofits, and ground-up retail builds kept on budget and on schedule.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild className=" bg-amber-500 px-6 text-white transition-colors duration-200 hover:bg-[#021F59]">
+              <Button asChild className="bg-white px-6 text-neutral-950 hover:bg-neutral-200 focus-visible:ring-white focus-visible:ring-offset-neutral-950">
                 <Link href="#contact">Discuss a project</Link>
               </Button>
               <Button
                 asChild
                 variant="outline"
-                className="  bg-white px-6 text-amber-500 transition-colors duration-200 hover:bg-amber-500 hover:text-white"
+                className="border-white bg-neutral-950 px-6 text-white hover:bg-neutral-800 hover:text-white focus-visible:ring-white focus-visible:ring-offset-neutral-950"
               >
                 <Link href="#projects">View work</Link>
               </Button>
